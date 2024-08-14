@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { isValidToken } from '../../lib/tokens';
+import HeaderClock from './headerClock';
+import { numberToDay } from '../../lib/server_funcs';
+import { getHorarios } from '../../lib/server_fetch';
+import Bloque from '../../components/Bloque.astro';
+
+export const prerender = false;
+const payload = isValidToken(Astro.params['token']);
+if (!payload) return Astro.redirect('/');
+
+const date = new Date(Date.now());
+const dia = numberToDay(date.getDay());
+const horarios = await getHorarios(import.meta.env.API_URL, payload);
+---
+
+<Layout title="Home">
+	<main id="Home">
+		<HeaderClock client:load />
+		<section>
+			{
+				!horarios
+					? null
+					: horarios[dia].length == 0
+						? 'Hoy no hay clases :)'
+						: horarios[dia].map((el) => <Bloque horario={el} />)
+			}
+		</section>
+		<footer>
+			{dia}
+			{date.toLocaleDateString()}
+		</footer>
+	</main>
+</Layout>
+
+<style lang="scss">
+	main#Home {
+	}
+</style>

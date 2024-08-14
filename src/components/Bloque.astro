@@ -1,0 +1,38 @@
+---
+import type { Horario_Ramo_data } from '../lib/types';
+interface Props {
+	horario: Horario_Ramo_data;
+}
+
+const { horario } = Astro.props;
+---
+
+<li>
+    <p>{horario.bloque}</p>
+    <p>{horario.code}</p>
+    <p>{horario.sala}</p>
+</li>
+
+<style lang="scss">
+	li {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		width: 500px;
+		padding: 1em;
+
+		border-bottom: #0c7e7e solid 0.2em;
+
+		& p {
+			width: 50px;
+		}
+	}
+	li:first-child {
+		border-radius: 0.2em 0.2em 0 0;
+	}
+	li:last-child {
+		border-radius: 0 0 0.2em 0.2em;
+		border: 0;
+	}
+</style>

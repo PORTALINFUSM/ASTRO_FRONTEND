@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LoginForm from './loginForm';
+---
+
+<Layout title="Login">
+	<main id="Login">
+        <LoginForm URL={import.meta.env.API_URL} client:load />
+    </main>
+</Layout>
