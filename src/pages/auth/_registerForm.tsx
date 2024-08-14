@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import styles from './form.module.scss';
+import styles from './_form.module.scss';
 export default function RegisterForm({ URL }: { URL: string }) {
 	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');

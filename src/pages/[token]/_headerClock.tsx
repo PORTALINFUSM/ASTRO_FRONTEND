@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import styles from './styles.module.scss';
+import styles from './_headerClock.module.scss';
 
 const hours_to_block = (hours: number): string => {
 	if (hours < 8.2) return '0-0';

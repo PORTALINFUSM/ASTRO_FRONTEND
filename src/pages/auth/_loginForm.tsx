@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import styles from './form.module.scss';
+import styles from './_form.module.scss';
 
 interface tResData {
 	status: boolean;

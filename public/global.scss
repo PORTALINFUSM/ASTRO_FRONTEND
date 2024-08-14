@@ -1,0 +1,22 @@
+$cyan-0: #000706;
+$cyan-1: #00272d;
+$cyan-2: #134647;
+$cyan-3: #0c7e7e;
+$cyan-4: #0fc3e8;
+$cyan-5: #bfac8b;
+
+html, body {
+    display: grid;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: $cyan-1;
+    color: $cyan-4;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+
+    height: 100%;
+}

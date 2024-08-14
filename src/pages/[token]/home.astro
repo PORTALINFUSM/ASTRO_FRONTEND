@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { isValidToken } from '../../lib/tokens';
-import HeaderClock from './headerClock';
+import HeaderClock from './_headerClock';
 import { numberToDay } from '../../lib/server_funcs';
 import { getHorarios } from '../../lib/server_fetch';
 import Bloque from '../../components/Bloque.astro';
@@ -35,6 +35,5 @@ const horarios = await getHorarios(import.meta.env.API_URL, payload);
 </Layout>
 
 <style lang="scss">
-	main#Home {
-	}
+    @import '_home';
 </style>

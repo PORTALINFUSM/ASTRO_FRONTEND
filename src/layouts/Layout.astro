@@ -28,71 +28,7 @@ const { title } = Astro.props;
 </html>
 
 <style is:global lang="scss">
-	$cyan-0: #000706;
-	$cyan-1: #00272d;
-	$cyan-2: #134647;
-	$cyan-3: #0c7e7e;
-	$cyan-4: #0fc3e8;
-	$cyan-5: #bfac8b;
-
-	.Bcyan-0 {
-		background-color: $cyan-0;
-	}
-	.Fcyan-0 {
-		color: $cyan-0;
-	}
-
-	.Bcyan-1 {
-		background-color: $cyan-1;
-	}
-	.Fcyan-1 {
-		color: $cyan-1;
-	}
-
-	.Bcyan-2 {
-		background-color: $cyan-2;
-	}
-	.Fcyan-2 {
-		color: $cyan-2;
-	}
-
-	.Bcyan-3 {
-		background-color: $cyan-3;
-	}
-	.Fcyan-3 {
-		color: $cyan-3;
-	}
-
-	.Bcyan-4 {
-		background-color: $cyan-4;
-	}
-	.Fcyan-4 {
-		color: $cyan-4;
-	}
-
-	.Bcyan-5 {
-		background-color: $cyan-5;
-	}
-	.Fcyan-5 {
-		color: $cyan-5;
-	}
-
-	html,
-	body {
-		display: grid;
-		overflow: hidden;
-
-		margin: 0;
-		padding: 0;
-
-		background-color: $cyan-1;
-		color: $cyan-4;
-
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 500;
-
-		height: 100%;
-	}
+	@import url(/global.scss);
 
 	h1 {
 		font-size: 104px;
