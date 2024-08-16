@@ -8,3 +8,7 @@ dist/
 
 # ENV
 *.env
+*.env.json
+
+# TEMP
+*.ansi
